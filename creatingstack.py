@@ -1,38 +1,80 @@
 class Stack:
-    def __init__(self):
-        self.items = []
+    def __init__(self,size):
+        if isinstance(size, int):
+            self.size = size
+        else:
+            self.size = 0
+            print("default used")
+
+        self.stack = []
+        print("your stack has been created")
+
+    # def create_list(self):
+    #     lst = input.split()
+    #     return lst
 
     def isEmpty(self):
-        if self.items == 0
-            print("this is empty")
+        # len looks @ how many values are in the stack this is 0 if its empty
+        if len(self.stack) == 0:
+            print("stack is empty")
+            #boolean value is returned
+            return True
         else:
             print ("this is not empty")
-
+            #boolean value is returned
+            return False
 
     def isFull(self):
-        lengthofitems = len(items)
-        return lengthofitems
-        if lengthofitems = self.lengthofitems
-            print("this stack is full")
+        # checking if the stack is complelty full by looking @ the len
+        if len(self.stack) == len(self.stack):
+            print("the stack is full")
+            #boolean value is returned
+            return True
+        else:
+            #boolean value is returned
+            return False
 
-    def push(self,item):
-        return self.items.append(items)
+
+    def push(self,stack):
+        #validates that the item is a string
+        if isinstance(item, str):
+            if not self.isFull():
+                # if the stack is NOT full then item is added
+                #append adds to the end
+                self.stack.append(item)
+                #sucess is shown to the used
+                print("ITEM HAS BEEN ADDED")
+            else:
+                #if the stack is full then it won't work
+                print("error, stack is full!")
+        else:
+            #shows an error is the item is not a str
+            print("ERROR")
+
+
 
     def pop(self):
-        return self.items.pop(items)
-
-    def peek(self):
-        return self.items(list[-1])
-
-    def peek(self):
-        if lengthofitems == 0
-            print("error this is empty")
+        # if the stack is empty nothing can be popped so an error will show
+        if self.isEmpty():
+            print("STACK EMPTY, INVALID REQUEST")
+            #else the top value will be popped
         else:
-            print(stack[lengthofitems-1])
+            #the request is valid so it is popped
+            popped = self.stack.pop(items)
+            #returns it
+            return popped
+
+    def peek(self):
+        # if the stack is empty there is nothing to peek so its invalid
+        if self.isEmpty():
+            print("STACK EMPTY, INVALID REQUEST")
+        else:
+            # -1 prints the value at the very top of the stack
+            print(self.stack[-1])
 
 
-push = .append
-pop = .pop
+# push = .append
+# pop = .pop
 
 return self.items.append(items)
 
